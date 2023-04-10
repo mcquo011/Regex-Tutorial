@@ -4,7 +4,7 @@ Regular expressions (regex) are a powerful tool for pattern matching and string 
 
 ## Summary
 
-I will describe the regular expression (regex) for matching email addresses. The regex pattern matches the typical email format, consisting of a username, the @ symbol, and a domain name. I will explain how the regex works and the different components of it. Here is the code snippet for the regex:
+I will describe the regular expression (regex) for matching email addresses. The regex pattern matches the typical email format, consisting of a username, the @ symbol, and a domain name. I will explain how the regex works and the different components of it. Here is the code for the regex:
 
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ 
 
@@ -70,18 +70,60 @@ Character classes are represented by square brackets ([]) and match any single c
 
 ### Flags
 
+Flags in regex is an optional paramater that can modify its behvaior of searching. A flag is represented by a single lowercase alphabetic character.
+
+For example, with the email regex we could add a lowercase i at the end: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i
+
+The i stands for 'ignoring casing' which will carry out a case-sensitive search. 
+
 ### Grouping and Capturing
+
+Capturing groups are used to extract and isolate specific parts of the matched string. When the regular expression is matched against a string, the values matched by each capturing group can be accessed and manipulated separately.
+
+In this regex there are three sets of parenthesis that create three capturing groups. 
+
+([a-z0-9_.-]+): This capturing group matches one or more lowercase letters, digits, underscores, periods, or hyphens for the email username.
+
+([\da-z.-]+): This capturing group matches one or more digits, lowercase letters, periods, or hyphens for the email domain name.
+
+([a-z.]{2,6}): This capturing group matches two to six lowercase letters or periods for the top-level domain.
+
+If the email is maggie.mcquown@gmail.com, the values captured by these three groups would be:
+
+1. The username, "maggie.mcquown"
+2. The domain name, "gmail.com"
+3. The top-level domain name, "com"
 
 ### Bracket Expressions
 
+There are several bracket expressions in this regex.
+
+* [a-z0-9_.-]
+* [\da-z.-]
+* [a-z.]
+
 ### Greedy and Lazy Match
+
+In this regex, there are no greedy or lazy matches specified. 
+
+Regular expressions have the capability to exhibit greedy or lazy behavior, causing a variation in the amount of input string that is matched. Greedy is the default behavior, where the expression matches as much input as possible. Conversely, a lazy match matches the least amount of input possible, as opposed to the greedy match that matches the most.
 
 ### Boundaries
 
+There are two boundaries represented by the caret (^) and dollar sign ($).
+
+* The caret (^) at the beginning of the regular expression represents the start-of-line boundary. It matches the beginning of the string and checks that the regular expression will only match email addresses that begin at the start of the line.
+
+* The dollar sign ($) at the end of the regular expression represents the end-of-line boundary. It matches the end of the string and checks that the regular expression will only match email addresses that end at the end of the line.
+
 ### Back-references
+
+There are no back-references in this regex. 
+
+Back-references are represented by the backslash followed by the number of the group to be referenced. Back-refrences allow you to refer back to a previously captured group within the same regular expression.
 
 ### Look-ahead and Look-behind
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+I am a Full-stack Web Developer passionate about creating websites and web applications that are both functional and aesthetically pleasing. Visit my [github profile(https://github.com/mcquo011)] to see what I'm working on.
