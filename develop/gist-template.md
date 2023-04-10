@@ -124,6 +124,10 @@ Back-references are represented by the backslash followed by the number of the g
 
 ### Look-ahead and Look-behind
 
+This regex does not require look-ahead or look-behind assertions because it is a simple pattern that matches an email address with a specific format. 
+
+Look-ahead and look-behind assertions are advanced features of regular expressions that allow you to check for a pattern ahead of or behind the current position in the input string, without actually including that pattern in the match. They can be useful for complex matching scenarios where you need to check for a certain condition without actually consuming that part of the input.
+
 ## Author
 
 I am a Full-stack Web Developer passionate about creating websites and web applications that are both functional and aesthetically pleasing. Visit my [github profile](https://github.com/mcquo011) to see what I'm working on.
