@@ -24,33 +24,33 @@ I will describe the regular expression (regex) for matching email addresses. The
 
 ## Regex Components
 
-^ - Match the start of the string.
+^ - Matches the start of the string.
 
-([a-z0-9_\.-]+) - Match one or more characters that can be lowercase letters, digits, underscores, hyphens, or periods. This represents the local part of the email address before the @ symbol.
+([a-z0-9_\.-]+) - Matches one or more characters that can be lowercase letters, digits, underscores, hyphens, or periods. This represents the part of the email address before the @ symbol.
 
-@ - Match the @ symbol.
+@ - Matches the @ symbol.
 
-([\da-z\.-]+) - Match one or more characters that can be digits, lowercase letters, dots, or hyphens. This represents the domain name.
+([\da-z\.-]+) - Matches one or more characters that can be digits, lowercase letters, dots, or hyphens. This represents the domain name.
 
-\. - Match a period.
+\. - Matches a period.
 
-([a-z\.]{2,6}) - Match two to six lowercase letters or periods. This represents the top-level domain (TLD), such as ".com" or ".org".
+([a-z\.]{2,6}) - Matches two to six lowercase letters or periods. This represents the top-level domain, such as ".com" or ".org".
 
-$ - Match the end of the string.
+$ - Matches the end of the string.
 
 ### Anchors
 
-In this regular expression, the ^ and $ characters are anchors that ensure that the pattern matches the entire string, from the beginning to the end. 
+In this regular expression, the ^ and $ characters are anchors that ensure the pattern matches the entire string, from the beginning to the end. 
 
-The caret symbol ^ is an anchor that matches the start of a string. The ^ character matches the start of the string and ensures that the pattern only matches if it starts at the beginning of the string.
+The ^ character matches the start of the string and ensures that the pattern only matches if it starts at the beginning of the string.
 
-The $ character at the end of the regular expression matches the end of the string and ensures that the pattern only matches if it ends at the end of the string.
+The $ character at the end of the regular expression matches the end of the string and ensures that the pattern only matches at the end of the string.
 
 ### Quantifiers
 
 Quantifiers are used to indicate how many times a character or group of characters should be matched. The quantifiers in the email address regex are (+) and the curly brackets ({2,6}).
 
-The plus sign (+) applies to the character set [a-z0-9_.-]. It means that one or more of these characters can appear in the email username. The plus sign also applies to the character set [\da-z\.-] and means that one or more of these characters can appear in the email domain name.
+The plus sign (+) applies to the character set [a-z0-9_.-]. It means one or more of these characters can appear in the email username. The plus sign also applies to the character set [\da-z\.-] and means one or more of these characters can appear in the email domain name.
 
 The curly brackets apply to the character set [a-z\.] and means the top-level domain (the part after the last dot) must be two to six characters long.
 
@@ -58,7 +58,7 @@ The curly brackets apply to the character set [a-z\.] and means the top-level do
 
 OR operators allow you to match one pattern or another and are represtened by the vertical bar symbol (|)
 
-This regex does not contain and OR operators.
+This regex does not contain any OR operators.
 
 ### Character Classes
 
@@ -70,7 +70,7 @@ Character classes are represented by square brackets ([]) and match any single c
 
 ### Flags
 
-Flags in regex is an optional paramater that can modify its behvaior of searching. A flag is represented by a single lowercase alphabetic character.
+Flags in regex are an optional paramater that can modify its behvaior of searching. A flag is represented by a single lowercase alphabetic character.
 
 For example, with the email regex we could add a lowercase i at the end: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i
 
@@ -106,7 +106,7 @@ There are several bracket expressions in this regex.
 
 In this regex, there are no greedy or lazy matches specified. 
 
-Regular expressions have the capability to exhibit greedy or lazy behavior, causing a variation in the amount of input string that is matched. Greedy is the default behavior, where the expression matches as much input as possible. Conversely, a lazy match matches the least amount of input possible, as opposed to the greedy match that matches the most.
+Regular expressions have the capability to exhibit greedy or lazy behavior, causing a variation in the amount of input string that is matched. Greedy is the default behavior, where the expression matches as much input as possible. Conversely, a lazy match matches the least amount of input possible, as opposed to the greedy match.
 
 ### Boundaries
 
@@ -117,16 +117,14 @@ There are two boundaries represented by the caret (^) and dollar sign ($).
 * The dollar sign ($) at the end of the regular expression represents the end-of-line boundary. It matches the end of the string and checks that the regular expression will only match email addresses that end at the end of the line.
 
 ### Back-references
+Back-references are represented by the backslash followed by the number of the group to be referenced. Back-refrences allow you to refer back to a previously captured group within the same regular expression.
 
 There are no back-references in this regex. 
 
-Back-references are represented by the backslash followed by the number of the group to be referenced. Back-refrences allow you to refer back to a previously captured group within the same regular expression.
-
 ### Look-ahead and Look-behind
+Look-ahead and look-behind assertions are advanced features of regular expressions that allow you to check for a pattern ahead of or behind the current position in the input string, without actually including that pattern in the match. They can be useful for complex matching scenarios where you need to check for a certain condition without actually consuming that part of the input.
 
 This regex does not require look-ahead or look-behind assertions because it is a simple pattern that matches an email address with a specific format. 
-
-Look-ahead and look-behind assertions are advanced features of regular expressions that allow you to check for a pattern ahead of or behind the current position in the input string, without actually including that pattern in the match. They can be useful for complex matching scenarios where you need to check for a certain condition without actually consuming that part of the input.
 
 ## Author
 

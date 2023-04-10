@@ -3,7 +3,7 @@
 
   ## Description 
 
-  A gist
+  Check out my [gist]() describing the regular expression (regex) for matching email addresses. In this gist we'll break down the different components of the regex and provide examples of how it can be used. Whether you're building a contact form for your website or validating email addresses in your application, understanding how to use regex for email validation can be a valuable skill to have in your toolkit.
 
   ## Usage 
 
@@ -21,7 +21,7 @@
 
   ## Contributers 
 
-  Starter code cloned from U of M bootcamp
+  Starter code cloned from U of M Full-stack Web Development bootcamp
 
   ## License 
   
