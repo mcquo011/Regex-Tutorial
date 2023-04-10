@@ -126,4 +126,4 @@ Back-references are represented by the backslash followed by the number of the g
 
 ## Author
 
-I am a Full-stack Web Developer passionate about creating websites and web applications that are both functional and aesthetically pleasing. Visit my [github profile(https://github.com/mcquo011)] to see what I'm working on.
+I am a Full-stack Web Developer passionate about creating websites and web applications that are both functional and aesthetically pleasing. Visit my [github profile](https://github.com/mcquo011) to see what I'm working on.
