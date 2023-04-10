@@ -48,11 +48,25 @@ The $ character at the end of the regular expression matches the end of the stri
 
 ### Quantifiers
 
-Quantifiers are used to indicate how many times a character or group of characters should be matched.
+Quantifiers are used to indicate how many times a character or group of characters should be matched. The quantifiers in the email address regex are (+) and the curly brackets ({2,6}).
+
+The plus sign (+) applies to the character set [a-z0-9_.-]. It means that one or more of these characters can appear in the email username. The plus sign also applies to the character set [\da-z\.-] and means that one or more of these characters can appear in the email domain name.
+
+The curly brackets apply to the character set [a-z\.] and means the top-level domain (the part after the last dot) must be two to six characters long.
 
 ### OR Operator
 
+OR operators allow you to match one pattern or another and are represtened by the vertical bar symbol (|)
+
+This regex does not contain and OR operators.
+
 ### Character Classes
+
+Character classes are represented by square brackets ([]) and match any single character within the brackets. This regex contains three character classes.
+
+* [a-z0-9_.-] matches any lowercase letter (a-z), digit (0-9), underscore (_), period (.), or hyphen (-). It is used to match characters in the username.
+* [\da-z.-] matches any digit (\d), lowercase letter (a-z), period (.), or hyphen (-). It is used to match characters in the domain name.
+* [a-z.]{2,6} matches any lowercase letter (a-z) or period (.) and it must appear between 2 to 6 times. It is used to match the top-level domain name including, "com", "org", "edu", etc
 
 ### Flags
 
