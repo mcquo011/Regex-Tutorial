@@ -130,4 +130,8 @@ This regex does not require look-ahead or look-behind assertions because it is a
 
 ## Author
 
-I am a Full-stack Web Developer passionate about creating websites and web applications that are both functional and aesthetically pleasing. Visit my [github profile](https://github.com/mcquo011) to see what I'm working on.
+Hi there! My name is Maggie and I am an emerging Full Stack Web Developer with a background in Fisheries Biology. With a deep passion for both technology and the environment, I am excited to combine my skills to create innovative solutions that can help address some of the pressing challenges facing our planet today.
+
+While my undergraduate degree was in Fisheries Biology, I have always had an interest in technology and have been fascinated by the power of code to bring ideas to life. After spending some time in the field, I decided to pursue my passion for technology by enrolling in a Full Stack Web Development certificate program. Through this program, I'm gaining hands-on experience in various web development technologies, including HTML, CSS, JavaScript, and Node.js, among others.
+
+ Visit my [github profile](https://github.com/mcquo011) to see what I'm working on.
