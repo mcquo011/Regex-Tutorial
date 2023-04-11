@@ -1,10 +1,10 @@
 # Email Regex
 
-Regular expressions (regex) are a powerful tool for pattern matching and string manipulation. One common use case for regex is validating and parsing email addresses. In this gist, we'll explore a regex pattern for matching email addresses and explain how it works. We'll break down the different components of the regex and provide examples of how it can be used. Whether you're building a contact form for your website or validating email addresses in your application, understanding how to use regex for email validation can be a valuable skill to have in your toolkit.
+Regex, often known as regular expressions, is an effective tool for string manipulation and pattern matching. The validation and parsing of email addresses is a typical application for regex. This gist will examine and describe a regex pattern for matching email addresses. We'll dissect the various parts of the regex and give applications for each one. Understanding how to use regex for email validation can be a useful ability to have in your toolkit, whether you're creating a contact form for your website or validating email addresses in your application.
 
 ## Summary
 
-I will describe the regular expression (regex) for matching email addresses. The regex pattern matches the typical email format, consisting of a username, the @ symbol, and a domain name. I will explain how the regex works and the different components of it. Here is the code for the regex:
+In this gist, I'll go over the regular expression (regex) for email address matching. The typical email format consists of a username, the @ symbol, and a domain name; all of these components are contained in the regex pattern. I'll go over the different components of the regex and how it works. You can find the regex code below:
 
 /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ 
 
@@ -56,7 +56,7 @@ The curly brackets apply to the character set [a-z\.] and means the top-level do
 
 ### OR Operator
 
-OR operators allow you to match one pattern or another and are represtened by the vertical bar symbol (|)
+OR operators allow you to match one pattern or another and are represented by the vertical bar symbol (|)
 
 This regex does not contain any OR operators.
 
@@ -70,17 +70,17 @@ Character classes are represented by square brackets ([]) and match any single c
 
 ### Flags
 
-Flags in regex are an optional paramater that can modify its behvaior of searching. A flag is represented by a single lowercase alphabetic character.
+Flags in regex are optional parameters that can modify its behavior of searching. A flag is represented by a single lowercase alphabetic character.
 
 For example, with the email regex we could add a lowercase i at the end: /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/i
 
-The i stands for 'ignoring casing' which will carry out a case-sensitive search. 
+i stands for 'ignoring casing' which will carry out a case-sensitive search. 
 
 ### Grouping and Capturing
 
 Capturing groups are used to extract and isolate specific parts of the matched string. When the regular expression is matched against a string, the values matched by each capturing group can be accessed and manipulated separately.
 
-In this regex there are three sets of parenthesis that create three capturing groups. 
+In this regex, there are three sets of parenthesis that create three capturing groups. 
 
 ([a-z0-9_.-]+): This capturing group matches one or more lowercase letters, digits, underscores, periods, or hyphens for the email username.
 
@@ -98,15 +98,15 @@ If the email is maggie.mcquown@gmail.com, the values captured by these three gro
 
 There are several bracket expressions in this regex.
 
-* [a-z0-9_.-]
-* [\da-z.-]
-* [a-z.]
+* [a-z0-9_.-]: Matches one or more occurrences of lowercase letters (a-z), digits (0-9), underscores (_), periods (.), or dashes (-). This expression matches the username part of the email address before the @ symbol.
+* [\da-z.-]: Matches one or more occurrences of digits (\d), lowercase letters (a-z), periods (.), or dashes (-). This expression matches the domain name (excluding the TLD) of the email address.
+* [a-z.]: Matches two to six lowercase letters (a-z) or period occurrences (.). This expression matches the email address's top-level domain (TLD), such as.com,.org,.edu, etc.
 
 ### Greedy and Lazy Match
 
 In this regex, there are no greedy or lazy matches specified. 
 
-Regular expressions have the capability to exhibit greedy or lazy behavior, causing a variation in the amount of input string that is matched. Greedy is the default behavior, where the expression matches as much input as possible. Conversely, a lazy match matches the least amount of input possible, as opposed to the greedy match.
+Regular expressions have the capability to exhibit greedy or lazy behavior, causing a variation in the amount of input string that is matched. Greedy is the default behavior, where the expression matches as much input as possible. Conversely, a lazy match matches the least amount of input possible, as opposed to a greedy match.
 
 ### Boundaries
 
@@ -117,11 +117,13 @@ There are two boundaries represented by the caret (^) and dollar sign ($).
 * The dollar sign ($) at the end of the regular expression represents the end-of-line boundary. It matches the end of the string and checks that the regular expression will only match email addresses that end at the end of the line.
 
 ### Back-references
-Back-references are represented by the backslash followed by the number of the group to be referenced. Back-refrences allow you to refer back to a previously captured group within the same regular expression.
+
+Back-references are represented by the backslash followed by the number of the group to be referenced. Back-references allow you to refer back to a previously captured group within the same regular expression.
 
 There are no back-references in this regex. 
 
 ### Look-ahead and Look-behind
+
 Look-ahead and look-behind assertions are advanced features of regular expressions that allow you to check for a pattern ahead of or behind the current position in the input string, without actually including that pattern in the match. They can be useful for complex matching scenarios where you need to check for a certain condition without actually consuming that part of the input.
 
 This regex does not require look-ahead or look-behind assertions because it is a simple pattern that matches an email address with a specific format. 

@@ -7,7 +7,7 @@
 
   ## Usage 
 
-  To use the email regex in your project, simply include it in your regular expression code. For example, in JavaScript:
+Simply add the email regex to your regular expression code to use it in your project. For example, in JavaScript:
 
   const emailRegex = /^([a-z0-9_.-]+)@([\da-z.-]+)\.([a-z.]{2,6})$/;
 
